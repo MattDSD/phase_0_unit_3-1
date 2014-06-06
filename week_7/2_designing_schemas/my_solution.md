@@ -66,4 +66,4 @@ end
 <!-- display your many-to-many image inline here -->
 
 ## Release 5: Reflection
-This exercise was really fun, learned many things about schema and ActiveRecord, belongs to, has one and has many relationships.
+This exercise was really fun, learned many things about schema and ActiveRecord, belongs_to, has_one and has_many relationships.
