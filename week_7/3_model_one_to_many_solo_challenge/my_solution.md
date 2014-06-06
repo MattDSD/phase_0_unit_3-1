@@ -145,4 +145,4 @@ ALTER TABLE `tweets` ADD FOREIGN KEY (id) REFERENCES `users` (`id`);
 
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
-I exercise is not that bad. I do know how/when to define the one_to_one, one_to_many and belongs_to relationships on models, but GUI representational confuses me more, with foreign key and etc etc.
+I exercise is not that bad. I do know how/when to define the one_to_one, one_to_many and belongs_to relationships on models, but GUI representation confuses me more, with foreign key and etc etc.
