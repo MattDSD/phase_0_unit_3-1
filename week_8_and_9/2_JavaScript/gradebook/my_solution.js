@@ -7,29 +7,40 @@ variables match (i.e., 'Joseph' is the first element in students; his scores are
 
 Do not alter the students and scores code.
 
-I worked on this challenge [by myself, with:]
+I worked on this challenge with: Matt Darin
 
 */
 
-var students = ["Joseph", "Susan", "William", "Elizabeth"]
+var students = ["Joseph", "Susan", "William", "Elizabeth"];
 
 var scores = [ [80, 70, 70, 100],
                [85, 80, 90, 90],
                [75, 70, 80, 75],
-               [100, 90, 95, 85] ]
-
-
-
-
+               [100, 90, 95, 85] ];
 
 
 // __________________________________________
 // Write your code below.
+var average = function avg(scores){
+  var sum = 0;
+  for (var i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  return sum/scores.length;
+};
 
-
-
-
-
+var gradebook = {
+  "Joseph": { grade: scores[0] },
+  "Susan": { grade: scores[1] },
+  "William": { grade: scores[2] },
+  "Elizabeth": {grade: scores[3] },
+  addScore: function(name, score){
+    this[name].grade.push(score);
+  },
+  getAverage: function(name){
+    return average(this[name].grade);
+  },
+};
 
 // __________________________________________
 // Refactored Solution
@@ -90,8 +101,8 @@ assert(
 )
 
 assert(
-  (gradebook.William.testScores === scores[2]),
-  "William's testScores should equal the third element in scores.",
+  (gradebook.William.grade === scores[2]),
+  "William's grade should equal the third element in scores.",
   "5. "
 )
 
@@ -104,9 +115,9 @@ assert(
 gradebook.addScore("Susan", 80)
 
 assert(
-  (gradebook.Susan.testScores.length === 5
-   && gradebook.Susan.testScores[4] === 80),
-  "Susan's testScores should have a new score of 80 added to the end.",
+  (gradebook.Susan.grade.length === 5
+   && gradebook.Susan.grade[4] === 80),
+  "Susan's grade should have a new score of 80 added to the end.",
   "7. "
 )
 
