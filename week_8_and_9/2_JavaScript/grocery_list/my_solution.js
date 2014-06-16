@@ -56,6 +56,18 @@ var Egg = new Groceries("Egg(s)", 4);
 var Banana = new Groceries("Banana(s)", 12);
 var Milk = new Groceries("Milk", 1);
 
+
+
+
+// 4. Refactored Solution
+
+
+
+
+
+
+// 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
+
 add_item(Apple);
 add_item(Egg);
 add_item(Banana);
@@ -72,28 +84,5 @@ list_item();
 
 
 
-// console.log(grocery_list);
 
-// grocery_list.check_item("Cheese");
-
-// grocery_list.remove_item("Pie");
-
-// grocery_list.remove_item("Cheese");
-
-// console.log(grocery_list);
-
-// 4. Refactored Solution
-
-
-
-
-
-
-// 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
-
-
-
-
-
-
-// 5. Reflection 
+// 5. Reflection

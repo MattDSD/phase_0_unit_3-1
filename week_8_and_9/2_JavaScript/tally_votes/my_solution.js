@@ -1,6 +1,6 @@
 // U3.W8-9: Gradebook from Names and Scores
 
-// I worked on this challenge [by myself, with:]
+// I worked on this challenge myself.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -30,7 +30,7 @@ var votes = {
   "Xavier": { president: "Steve", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
   "Yvonne": { president: "Bob", vicePresident: "Zane", secretary: "Fred", treasurer: "Hermann" },
   "Zane": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Mary" }
-}
+};
 
 // Tally the votes in voteCount.
 var voteCount = {
@@ -38,7 +38,7 @@ var voteCount = {
   vicePresident: {},
   secretary: {},
   treasurer: {}
-}
+};
 
 /* The name of each student receiving a vote for an office should become a property 
 of the respective office in voteCount.  After Alex's votes have been tallied, 
@@ -54,14 +54,14 @@ voteCount would be ...
 */
 
 
-/* Once the votes have been tallied, assign each officer position the name of the 
+/* Once the votes have been tallied, assign each power position the name of the 
 student who received the most votes. */
-var officers = {
+var powers = {
   president: undefined,
   vicePresident: undefined,
   secretary: undefined,
   treasurer: undefined
-}
+};
 
 // Pseudocode
 
@@ -70,9 +70,28 @@ var officers = {
 // Initial Solution
 
 
+for (var student in votes){
+  var student_pick = votes[student];
+  for (var picked in student_pick){
+    var counter = counter;
+    if(counter > 0 ){
+      counter ++;
+    } else {
+      counter = 1;
+    }
+  }
+}
 
-
-
+for (var power in voteCount){
+  count = voteCount[power];
+  var max_count_count = 1;
+  for(var i in count){
+    if (count[i] >= max_count_count) {
+      max_count_count = count[i];
+      powers[power] = i;
+    }
+  }
+}
 
 
 // __________________________________________
@@ -129,25 +148,25 @@ assert(
 )
 
 assert(
-  (officers.president === "Louise"),
+  (powers.president === "Louise"),
   "Louise should be elected President.",
   "5. "
 )
 
 assert(
-  (officers.vicePresident === "Hermann"),
+  (powers.vicePresident === "Hermann"),
   "Hermann should be elected Vice President.",
   "6. "
 )
 
 assert(
-  (officers.secretary === "Fred"),
+  (powers.secretary === "Fred"),
   "Fred should be elected Secretary.",
   "7. "
 )
 
 assert(
-  (officers.treasurer === "Ivy"),
+  (powers.treasurer === "Ivy"),
   "Ivy should be elected Treasurer.",
   "8. "
 )
