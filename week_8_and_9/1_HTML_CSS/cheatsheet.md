@@ -28,9 +28,12 @@ Suggestion: Pair with someone to complete this challenge. Two brains are better 
 ## Release 1: Wireframe your website
 Create a wireframe for your website. You can do it on paper or using a resource. Take an image and upload it into [this](./) directory.
 
+###[Wireframe](https://dl.dropboxusercontent.com/u/217485785/youcodeio/prelaunch.html)
+
 ## Release 2: Create the HTML template
 Create a new file in your github.io repository called `unit3_cheatsheet.html`
 
+###[Git CheatSheet](http://www.dahal.co/blog/2014/05/05/basic-git-commands.html)
 Design your site with the idea that you and your cohort-mates are the clients. How would you want a cheat-sheet to look to be effective as you go through Dev Bootcamp?
 
 Consider the various ways you can present the information in HTML. Do you want to use `<div>`s, tables, or something else? What makes the most sense for what you are doing? Follow best practices and reserve formatting for your CSS file!
