@@ -1,0 +1,13 @@
+# This Rakefile will take care of all the tests.
+gem 'rspec', '~>2'
+require 'rspec/core/rake_task'
+
+task :default => :spec
+
+desc "Run tests for Unit_2"
+RSpec::Core::RakeTask.new do |task|
+  folder = Rake.application.original_dir
+  task.pattern = "#{folder}/*_spec.rb"
+  task.rspec_opts = [ "-I#{folder}", "-I#{folder}/solution", '-f documentation', '-r ./rspec_config']
+  task.verbose = false
+end
